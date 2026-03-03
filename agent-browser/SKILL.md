@@ -2,7 +2,37 @@
 
 **Description:** 自动化浏览器操作，用于网页浏览、表单填写、截图保存等。适用于需要交互式操作的场景（如登录网站、搜索信息、下载文件）。  
 **Location:** `~/skills/agent-browser/SKILL.md`  
-**Prerequisites:** Chrome/Chromium-based browser (Chrome, Brave, Edge)
+**Prerequisites:** 
+- Node.js + npm (for agent-browser CLI)
+- Chrome/Chromium-based browser (Chrome, Brave, Edge)
+
+---
+
+## 🚀 快速安装（首次使用必读）
+
+### **自动安装脚本**
+```bash
+# 进入技能目录并运行安装脚本
+cd ~/skills/agent-browser && bash install.sh
+```
+
+该脚本会自动：
+1. ✅ 检查 Node.js/npm 是否已安装  
+2. 📦 通过 npm 全局安装 `agent-browser`  
+3. 🔍 检测系统中是否有支持的浏览器（Chrome/Chromium）  
+4. 💥 如果没有 Chrome，提示并辅助安装 Chromium  
+
+### **手动安装**
+```bash
+# 1. 确保已安装 Node.js + npm (v18+)
+node -v && npm -v
+
+# 2. 全局安装 agent-browser
+npm install -g agent-browser
+
+# 3. 安装浏览器（如果还没有）
+sudo apt update && sudo apt install -y chromium-browser
+```
 
 ---
 
@@ -250,8 +280,51 @@ wait --text "欢迎回来"
 
 ## ⚠️ 注意事项
 
-1. **浏览器要求**：必须安装 Chrome/Chromium（不支持 Firefox/Safari）  
-   → `sudo apt install chromium-browser` (Ubuntu) / `brew install chromium` (macOS)
+### 🔧 **环境依赖检查**
+
+运行前请确保：
+1. ✅ Node.js v18+ + npm（用于安装 agent-browser CLI）  
+2. ✅ Chrome/Chromium-based browser（Chrome、Brave、Edge - Firefox/Safari 不支持）  
+
+如果未安装，请先运行自动安装脚本：
+```bash
+cd ~/skills/agent-browser && bash install.sh
+```
+
+### 🌐 **浏览器兼容性**
+- ✓ Supported: Chrome, Chromium, Brave, Edge (all based on WebKit/Blink)  
+- ✗ Not supported: Firefox, Safari  
+
+---
+
+## ⚠️ 常见问题和解决方案
+
+### ❓ "No supported browser found" 错误怎么办？
+```bash
+# Ubuntu/Debian
+sudo apt update && sudo apt install -y chromium-browser
+
+# macOS (Homebrew)
+brew install --cask google-chrome  # or brave, edge, chromium
+```
+
+### ❓ npm install fails?
+```bash
+# Try with root permissions if needed
+sudo npm install -g agent-browser
+
+# Or use a user-scoped prefix
+mkdir ~/npm-global
+export NPM_CONFIG_PREFIX=~/npm-global
+export PATH=$PATH:$HOME/npm-global/bin
+npm install -g agent-browser
+```
+
+### ❓ Permission denied when running?
+Check that `agent-browser` is in your `$PATH`:
+```bash
+which agent-browser  # Should return /usr/local/bin/agent-browser or similar
+```
 
 2. **Ref 引用机制**：使用 `snapshot --annotate -i` 生成元素列表，后续用 `@e1`, `@e2`... 引用
 
@@ -266,10 +339,22 @@ wait --text "欢迎回来"
 ---
 
 ## 📚 参考资源
-- 官方文档：https://agent-browser.dev/commands  
-- Playwright 选择器语法：https://playwright.dev/docs/selectors  
-- WAI-ARIA roles: https://www.w3.org/TR/wai-aria-1.2/#roles  
+- **官方文档**: https://agent-browser.dev/commands  
+- **Playwright 选择器语法**: https://playwright.dev/docs/selectors  
+- **WAI-ARIA roles**: https://www.w3.org/TR/wai-aria-1.2/#roles  
 
 ---
 
-*最后更新：2026-03-03* 🦐
+## 🛠️ 维护者信息
+- **作者**: zbw
+- **创建时间**: 2026-03-03
+- **版本**: v1.1 (with auto-install script)
+
+**更新日志:**
+- [2026-03-03] Initial creation + install.sh automation script added  
+- Added comprehensive installation guide and troubleshooting section  
+- Enhanced Prerequisites documentation with environment checks  
+
+---
+
+*Last updated: 2026-03-03 🦐*</parameter>,

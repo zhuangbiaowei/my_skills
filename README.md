@@ -36,10 +36,10 @@ openclaw skills read <name>       # 查看某个技能的文档内容
 
 ## 📚 现有 Skills
 
-| Skill | 功能描述 | SKILL.md 路径 |
-|-------|----------|---------------|
-| **agent-browser** | 浏览器自动化操作（搜索、截图、表单填写） | `skills/agent-browser/SKILL.md` |
-| *(添加更多...)* | *待创建* | - |
+| Skill | 功能描述 | SKILL.md 路径 | install.sh |
+|-------|----------|---------------|------------|
+| **agent-browser** | 浏览器自动化操作（搜索、截图、表单填写）+ 自动安装脚本 | `skills/agent-browser/SKILL.md` | ✅ [install.sh](./agent-browser/install.sh) |
+| *(添加更多...)* | *待创建* | - | - |
 
 ---
 
