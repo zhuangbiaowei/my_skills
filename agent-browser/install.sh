@@ -99,10 +99,10 @@ echo ""
 BROWSER_FOUND=false
 declare -A BROWSERS=(
     ["chrome"]="Google Chrome"
-    ["brave="Brave Browser"]
-    ["edge="Microsoft Edge]
-    ["chromium="Chromium]
-    ["google-chrome="Chrome (Ubuntu)]
+    ["brave"]="Brave Browser"
+    ["edge"]="Microsoft Edge"
+    ["chromium"]="Chromium"
+    ["google-chrome"]="Chrome (Ubuntu)"
 )
 
 for browser in "${!BROWSERS[@]}"; do
