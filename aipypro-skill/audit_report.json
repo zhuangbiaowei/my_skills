@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-03-13T12:07:04.426247",
+  "total_files": 5,
+  "files_audited": [
+    {
+      "filename": "SKILL.md",
+      "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\SKILL.md",
+      "exists": true,
+      "size": 5248,
+      "size_human": "5,248 字符",
+      "audit_passed": true,
+      "issues": []
+    },
+    {
+      "filename": "README.md",
+      "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\README.md",
+      "exists": true,
+      "size": 6408,
+      "size_human": "6,408 字符",
+      "audit_passed": true,
+      "issues": []
+    },
+    {
+      "filename": "command_reference.md",
+      "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\references\\command_reference.md",
+      "exists": true,
+      "size": 5965,
+      "size_human": "5,965 字符",
+      "audit_passed": true,
+      "issues": []
+    },
+    {
+      "filename": "examples.md",
+      "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\references\\examples.md",
+      "exists": true,
+      "size": 46,
+      "size_human": "46 字符",
+      "audit_passed": false,
+      "issues": [
+        "文件大小不足: 46 < 15000",
+        "缺少章节: 基础示例, 编程示例, 数据分析示例, 文件系统示例, 系统管理示例",
+        "示例数量不足: 0 < 10"
+      ]
+    },
+    {
+      "filename": "aipypro_helper.py",
+      "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\scripts\\aipypro_helper.py",
+      "exists": true,
+      "size": 20245,
+      "size_human": "20,245 字符",
+      "audit_passed": true,
+      "issues": []
+    }
+  ],
+  "summary": {
+    "total_files": 5,
+    "passed_count": 4,
+    "failed_count": 1,
+    "pass_rate": "80.0%",
+    "total_size": 37912,
+    "average_size": "7,582 字符"
+  }
+}

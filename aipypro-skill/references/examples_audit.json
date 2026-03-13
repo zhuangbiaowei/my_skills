@@ -1,0 +1,29 @@
+{
+  "filename": "examples.md",
+  "path": "C:\\Users\\zbw25\\WorkBuddy\\20260313102444\\aipypro-skill\\references\\examples.md",
+  "audit_timestamp": "2026-03-13T12:16:39.900023",
+  "file_size": 46,
+  "metrics": {
+    "total_examples": 0,
+    "code_blocks": 0,
+    "bash_commands": 0,
+    "sections": 0,
+    "subsections": 0,
+    "use_cases": 0,
+    "expected_outputs": 0,
+    "generated_code": 0,
+    "commands": 0
+  },
+  "domains_covered": [],
+  "domains_total": 5,
+  "coverage_percentage": "0.0%",
+  "missing_elements": [
+    "Introduction",
+    "Quick Navigation",
+    "Conclusion",
+    "Key Takeaways",
+    "Next Steps"
+  ],
+  "audit_passed": false,
+  "quality_rating": "Poor"
+}

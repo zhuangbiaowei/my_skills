@@ -1,0 +1,65 @@
+{
+  "task_configuration": {
+    "task_name": "Example Task",
+    "created_at": "2024-01-01 10:00:00",
+    "version": "1.0.0",
+    "description": "Template for AipyPro task configuration"
+  },
+  
+  "execution_settings": {
+    "style": "modern",
+    "role": "developer",
+    "timeout_seconds": 60,
+    "max_retries": 3,
+    "output_directory": "./output"
+  },
+  
+  "instructions": [
+    "First instruction to execute",
+    "Second instruction to execute",
+    "Third instruction to execute"
+  ],
+  
+  "parameters": {
+    "input_file": "data.csv",
+    "output_file": "results.json",
+    "config_file": "config.yaml"
+  },
+  
+  "dependencies": {
+    "python_packages": [
+      "pandas",
+      "numpy",
+      "matplotlib"
+    ],
+    "system_requirements": {
+      "python_version": ">=3.8",
+      "memory_gb": 4,
+      "disk_space_gb": 1
+    }
+  },
+  
+  "validation_rules": {
+    "check_output_exists": true,
+    "validate_file_sizes": true,
+    "verify_checksums": false,
+    "expected_runtime_seconds": 30
+  },
+  
+  "documentation": {
+    "author": "Your Name",
+    "purpose": "Describe the purpose of this task",
+    "expected_outputs": [
+      "List of expected output files",
+      "Description of each output"
+    ],
+    "notes": "Any additional notes or instructions"
+  },
+  
+  "metadata": {
+    "project": "Project Name",
+    "environment": "development",
+    "priority": "normal",
+    "tags": ["data-processing", "analysis", "automation"]
+  }
+}
